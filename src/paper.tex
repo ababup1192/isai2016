@@ -1,0 +1,166 @@
+
+%%%%%%%%%%%%%%%%%%%%%%% file typeinst.tex %%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% This is the LaTeX source for the instructions to authors using
+% the LaTeX document class 'llncs.cls' for contributions to
+% the Lecture Notes in Computer Sciences series.
+% http://www.springer.com/lncs       Springer Heidelberg 2006/05/04
+%
+% It may be used as a template for your own input - copy it
+% to a new file with a new name and use it as the basis
+% for your article.
+%
+% NB: the document class 'llncs' has its own and detailed documentation, see
+% ftp://ftp.springer.de/data/pubftp/pub/tex/latex/llncs/latex2e/llncsdoc.pdf
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\documentclass[runningheads,a4paper]{llncs}
+
+\usepackage{cite}
+\usepackage{amssymb}
+\setcounter{tocdepth}{3}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{minted}
+\usepackage{longtable}
+\usepackage{booktabs}
+
+\usepackage{url}
+\definecolor{bg}{rgb}{0.95, 0.95, 0.95}
+\urldef{\mailsa}\path||
+\urldef{\mailsb}\path||
+\urldef{\mailsc}\path|{d8161105, yutaka, vazhenin}@u-aizu.ac.jp|
+\newcommand{\keywords}[1]{\par\addvspace\baselineskip
+\noindent\keywordname\enspace\ignorespaces#1}
+
+% マクロ定義
+\newcommand*{\mfigure}[5]{\begin{figure}[htb]
+  \centering\includegraphics[width=#1mm, height=#2mm]{#3}
+  \caption{#4}\label{fig:#5}\end{figure}
+}
+
+\newcommand*{\mfigureF}[5]{\begin{figure}[H]
+  \centering\includegraphics[width=#1mm, height=#2mm]{#3}
+  \caption{#4}\label{fig:#5}\end{figure}
+}
+
+% \mfigcode{width}{height}{graph-path}{code-path}{lratio}{rratio}{caption}{label}
+\newcommand*{\mfigcode}[8]{\begin{figure}[htb]\begin{tabular}{c}\begin{minipage}{#5\hsize}
+  \centering\includegraphics[width=#1mm, height=#2mm]{#3}\hspace{1.6cm}
+  \end{minipage}\begin{minipage}{#6\hsize}
+  \lstinputlisting[tabsize=2,basicstyle={\ttfamily\small},breakindent=5pt]{#4}
+  \end{minipage}\end{tabular}\caption{#7}\label{fig:#8}\end{figure}
+}
+
+\begin{document}
+
+\mainmatter  % start of an individual contribution
+
+% first the title is needed
+\title{Modeling Tools for Social Coding}
+
+% a short form should be given in case it is too long for the running head
+\titlerunning{Modeling Tools for Social Coding}
+
+% the name(s) of the author(s) follow(s) next
+%
+% NB: Chinese authors should write their first names(s) in front of
+% their surnames. This ensures that the names appear correctly in
+% the running heads and the author index.
+%
+\author{Mirai Watanabe \and Yutaka Watanobe \and Alexander Vazhenin}
+%
+\authorrunning{Modeling Tools for Social Coding}
+% (feature abused for this document to repeat the title also on left hand pages)
+
+% the affiliations are given next; don't give your e-mail address
+% unless you accept that it will be published
+\institute{Department of Information Systems,\\
+  University of Aizu,Aizu-Wakamatsu,965-8580,Japan\\
+\mailsa\\
+\mailsb\\
+\mailsc\\
+\url{}}
+
+\toctitle{Lecture Notes in Computer Science}
+\tocauthor{Authors' Instructions}
+\maketitle
+
+\input{src/abstract}
+
+\input{src/introduction}
+
+\input{src/related_works}
+
+\input{src/modeling_tools}
+
+\input{src/yaml}
+
+\input{src/case_study}
+
+\input{src/conclusion}
+
+\begin{thebibliography}{12}
+
+%\bibitem{jour} Smith, T.F., Waterman, M.S.: Identification of Common Molecular
+%Subsequences. J. Mol. Biol. 147, 195--197 (1981)
+
+%\bibitem{url} National Center for Biotechnology Information, \url{http://www.ncbi.nlm.nih.gov}
+
+\bibitem{agile} R C. Martin,  Agile Software Development,  Principles,  Patterns,  and Practices,  Prentice Hall (2012)
+
+\bibitem{agile2} R. Bergmann,  S. Gessinger,  S. Gorg,  G. Muller,  The Collaborative Agile Knowledge Engine CAKE,  GROUP '14 Proceedings of the 18th International Conference on Supporting Group Work (2014)
+
+\bibitem{github} Github,  \url{https://github.com}
+
+\bibitem{git} Git, \url{http://git-scm.com}
+
+\bibitem{vcs} D. Spinelis, Version control systems, Software, Software, IEEE (2005)
+
+\bibitem{yaml} YAML,  \url{http://yaml.org}
+
+\bibitem{uml} UML,  \url{http://www.uml.org}
+
+\bibitem{xuml} S. J. Mellor,  M. J. Balcer,  Executable UML: A Foundation for Model-driven Architecture Addison-Wesley Professional (2002)
+
+
+\bibitem{scratch}  J L. Ford, Scratch Programming for Teens, 1st ed. Course Technology Press,
+  Boston (2008)
+
+\bibitem{labview} R. Bitter, T. Mohiuddin, M. Nawrocki, LabView: Advanced Programming Techniques,
+  2nd edn. CRC Press (2007)
+
+\bibitem{text-uml} TextUML,  \url{http://abstratt.github.io/textuml/readme.html}
+
+\bibitem{yuml} yUML,  \url{http://yuml.me}
+
+\bibitem{amt-uml} AmaterasUML,  \url{http://amateras.sourceforge.jp/cgi-bin/fswiki/wiki.cgi?page=AmaterasUML}
+
+\bibitem{class-vis} Class Visualizer,  \url{http://class-visualizer.net}
+
+\bibitem{visual-paradigm} Visual Paradigm, \url{http://www.visual-paradigm.com}
+
+\bibitem{xuml-tools} xuml-tools,  \url{https://github.com/davidmoten/xuml-tools/blob/master/README.md}
+
+\bibitem{alf} E. Seidewitz,  UML with Meaning: Executable Modeling in Foundational
+  UML and the Alf Action Language,  HILT '14 Proceedings of the 2014 ACM SIGAda annual conference on High integrity language technology (2014)
+
+\bibitem{hybrid} F. Niklas, G. Hedin, Using Refactoring Techniques for Visual Editing of Hybrid Languages, Workshop on Refactoring Tools (WRT '13) In Workshop on Refactoring Tools (2013)
+
+\bibitem{hybrid2} R. Koitz, W. Slany, Empirical Comparison of Visual to Hybrid Formula Manipulation in Educational Programming Languages for Teenagers, PLATEAU '14 Proceedings of the 5th Workshop on Evaluation and Usability of Programming Languages and Tools(2014)
+
+\bibitem{hybrid3} L A. Maciaszek, K. Zhang, Structure Editors: Old Hat or Future Vision?, Evaluation of Novel Approaches to Software Engineering (2011)
+
+\bibitem{mda} S. J. Mellor,  K. Scotto,  A. Uhi, MDA Distilled: Principles of Model-Driven Architecture,  Addison-Wesley Professional (2004)
+
+\bibitem{mda2} B. Hailpern,  P. Tarr,  Model-driven development: the good,  the bad,  and the ugly,  IBM SYSTEMS JOURNAL (2006)
+
+\bibitem{mdd} A. B. Brown, S. Iyengar,  S. Johnston, A Rational approach to model-driven development IBM Systems Journal (2007)
+
+\bibitem{mdd2} K. Marth,  S. Ren,  Model-Driven Development with eUML-ARC,  Proceedings of the 27th Annual ACM Symposium on Applied Computing (2012)
+
+\end{thebibliography}
+
+\end{document}

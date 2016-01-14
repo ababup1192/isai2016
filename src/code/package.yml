@@ -1,0 +1,18 @@
+package:
+  name: jp.ac.u-aizu
+  in: [carriage]
+
+package:
+  name: carriage
+  in: [vehicle, vessel]
+
+package:
+  name: vehicle
+  in: [Car, Bike, Train]
+
+package:
+  name: vessel
+  in: [Ship, Boat, Jet ski]
+
+class: [Car, Bike, Train,
+       Ship, Boat, Jet ski]

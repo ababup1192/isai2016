@@ -1,0 +1,15 @@
+
+class:
+  name: SampleClass
+  package:  jp.ac.u-aizu
+  attributes:
+    - instance:
+        visibility: '-'
+        name: x
+        type: int
+        default: 0
+  operations:
+    - instance:
+        {visibility: '+',
+          name: getX,
+          type: int}

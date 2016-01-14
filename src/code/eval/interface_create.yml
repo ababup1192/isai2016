@@ -1,0 +1,14 @@
+interface:
+  name: List
+  operations:
+    - instance:
+      visibility: '+'
+      name: push
+      type: void
+      arguments:
+        - variable: {name: x, type: int}
+    - instance:
+      visibility: '+'
+      name: pop
+      type: int
+

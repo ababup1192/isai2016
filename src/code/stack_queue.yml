@@ -1,0 +1,26 @@
+class:
+  name: Stack
+  generalization: Container
+  realization: [List]
+  attributes:
+    - instance:
+        visibility: '-'
+        name: top
+        type: int
+  operations:
+    - DefaultConstructor: true
+...
+interface:
+  name: List
+  operations:
+    - instance:
+      visibility: '+'
+      name: push
+      type: void
+      arguments:
+        - variable: {name: x, type: int}
+    - instance:
+      visibility: '+'
+      name: pop
+      type: int
+...

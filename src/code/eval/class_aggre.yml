@@ -1,0 +1,4 @@
+aggregation:
+  - class:
+    name: Passenger
+    multiplicaty: ['1',  '1..*']

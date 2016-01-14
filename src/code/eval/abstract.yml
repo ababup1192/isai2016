@@ -1,0 +1,10 @@
+abstract_class:
+  name: Container
+  generalization: DataStructure
+  operations:
+    - DefaultConstructor: {visibility: '+'}
+  aggregation:
+    - class:
+        name: Data
+        multiplicity: ['1', '1']
+ DefaultConstructor: true

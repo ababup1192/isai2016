@@ -1,0 +1,5 @@
+abstract_class:
+  name: Container
+  operations:
+    - DefaultConstructor: {visibility: '+'}
+DefaultConstructor: true

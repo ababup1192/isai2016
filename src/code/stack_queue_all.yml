@@ -1,0 +1,68 @@
+class:
+  name: DataStructure
+  operations:
+    - DefaultConstructor: true
+
+abstract_class:
+  name: Container
+  generalization: DataStructure
+  operations:
+    - DefaultConstructor: {visibility: '+'}
+  aggregation:
+    - class:
+        name: Data
+        multiplicity: ['1', '1']
+
+class:
+  name: Data
+  attributes:
+    - instance:
+        visibility: '+'
+        name: buffer
+        type: int
+  operations:
+    - Constructor:
+        arguments:
+          - variable: {name: size, type: int}
+
+interface:
+  name: List
+  operations:
+    - instance:
+      visibility: '+'
+      name: push
+      type: void
+      arguments:
+        - variable: {name: x, type: int}
+    - instance:
+      visibility: '+'
+      name: pop
+      type: int
+
+class:
+  name: Stack
+  generalization: Container
+  realization: [List]
+  attributes:
+    - instance:
+        visibility: '-'
+        name: top
+        type: int
+  operations:
+    - DefaultConstructor: true
+
+class:
+  name: Queue
+  generalization: Container
+  realization: [List]
+  attributes:
+    - instance:
+        visibility: '-'
+        name: head
+        type: int
+    - instance:
+        visibility: '-'
+        name: tail
+        type: int
+  operations:
+    - DefaultConstructor: true

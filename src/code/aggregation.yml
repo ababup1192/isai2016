@@ -1,0 +1,19 @@
+class:
+  name: Taxy
+  attributes:
+    - instance:
+        visibility: '-'
+        name: companyName
+        type: String
+    - instance:
+        visibility: '-'
+        name: amount
+        type: int
+  aggregation:
+    - class:
+        name: Passenger
+        multiplicity: ['1', '1..*']
+
+class:
+  name: Passenger
+  ...

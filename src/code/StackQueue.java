@@ -1,0 +1,29 @@
+/* Stack */
+public class Stack extends
+Container implements List{
+  public int top;
+
+  public Stack(){}
+
+  public void push(int x){}
+
+  public int pop(){
+      return 0;
+  }
+}
+
+
+/* Queue */
+public class Queue
+    extends Container implements List{
+      public int head;
+      public int tail;
+
+      public Queue(){}
+
+      public void push(int x){}
+
+      public int pop(){
+        return 0;
+      }
+}

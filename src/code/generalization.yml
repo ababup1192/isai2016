@@ -1,0 +1,33 @@
+class:
+  name: Car
+  attributes:
+    - instance:
+        visibility: '-'
+        name: carModel
+        type: String
+  operations:
+    - instance:
+        {visibility: '+',
+         name: accelerate, type: void}
+    - instance:
+        {visibility: '+',
+         name: decelerate, type: void}
+
+class:
+  name: Bus
+  generalization: Car
+  attributes:
+    - instance:
+        visibility: '-'
+        name: amount
+        type: int
+  operations:
+    - instance:
+        {visibility: '+',
+         name: announce, type: void}
+
+class:
+  name: Truck
+  ...
+
+  

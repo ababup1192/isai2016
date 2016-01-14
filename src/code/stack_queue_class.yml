@@ -1,0 +1,47 @@
+class:
+  name: DataStructure
+  operations:
+    - DefaultConstructor: true
+
+
+class:
+  name: Data
+  attributes:
+    - instance:
+        visibility: '+'
+        name: buffer
+        type: int
+  operations:
+    - Constructor:
+        arguments:
+          - variable: {name: size, type: int}
+
+class:
+  name: Stack
+  generalization: Container
+  realization: [List]
+  attributes:
+    - instance:
+        visibility: '-'
+        name: top
+        type: int
+  operations:
+    - DefaultConstructor: true
+
+class:
+  name: Queue
+  generalization: Container
+  realization: [List]
+  attributes:
+    - instance:
+        visibility: '-'
+        name: head
+        type: int
+    - instance:
+        visibility: '-'
+        name: tail
+        type: int
+  operations:
+    - DefaultConstructor: true
+
+    
